@@ -32,7 +32,7 @@
 	var owlCarouselFeatureSlide = function() {
 		var owl2 = $('.owl-carousel');
 		owl2.owlCarousel({
-			animateOut: 'fadeOut',
+			animateOut: 'transition',
 		   animateIn: 'fadeIn',
 		   autoplay: true,
 		   loop:true,
@@ -50,7 +50,7 @@
 		});
 		var owl3 = $('.owl-carousel3');
 		owl3.owlCarousel({
-			animateOut: 'fadeOut',
+			animateOut: 'transition',
 		   animateIn: 'fadeIn',
 		   autoplay: true,
 		   loop:true,

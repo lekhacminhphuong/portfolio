@@ -64,12 +64,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1); 
 }
 
-@media screen and (max-width: 768px) {
-  #page {
-    padding-top: 5em
-  } 
-}
-
 header {
   padding: 1em 0;
   position: absolute;
@@ -80,11 +74,6 @@ header {
   margin: 0 auto
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    padding: 2em 0; 
-  } 
-}
 
 /* Style for 'Phuong Le' text logo */
 header .navbar .logo {
@@ -168,12 +157,6 @@ header .navbar .logo {
   transform: rotate(90deg)
 }
 
-@media screen and (max-width: 768px) {
-  .number {
-    display: none; 
-  } 
-}
-
 .text-inner {
   display: block;
   width: 100%;
@@ -186,12 +169,7 @@ header .navbar .logo {
   font-weight: 700;
   letter-spacing: 2px; 
 }
-        
-@media screen and (max-width: 768px) {
-  .text-inner h2 {
-      font-size: 24px; 
-  }
-}
+
 
 /* Style for Page subtitles */
 .tag {
@@ -211,39 +189,7 @@ header .navbar .logo {
   position: relative; 
   float: right;
 }
-        
-@media screen and (max-width: 768px) {        
-  .desc {
-    padding: 1em;
-    background: #fff;
-    width: 100%; 
-  } 
-}
-        
-@media screen and (max-width: 480px) {
-  .desc {
-    padding: 1em;
-    background: #fff;
-    width: 140%; 
-  } 
-}
 
-
-/* .desc:after {
-  position: absolute;
-  top: 30px;
-  bottom: 0;
-  right: 0;
-  content: '';
-  width: 650px;
-  border-top: 2px dashed #b7ae9b;
-}
-          
-@media screen and (max-width: 768px) {
-  .desc:after {
-    opacity: 0; 
-  } 
-} */
       
 /* Style for link-to-outside-sources buttons */
 .btn-view {
@@ -261,12 +207,7 @@ header .navbar .logo {
   border: 1px dashed rgba(0, 0, 0, 0.8);
   background: #b7ae9b;
 }
-        
-@media screen and (max-width: 768px) {
-  .btn-view {
-    letter-spacing: 2px; 
-  } 
-}
+
   
 /* Style for control bar (left and right page buttons) */
 .owl-controls {
@@ -277,12 +218,6 @@ header .navbar .logo {
     width: 130px;
     display: block;
     cursor: pointer;
-}
-    
-@media screen and (max-width: 768px) {
-  .owl-controls {
-    left: 240px; 
-  } 
 }
 
 .owl-nav [class*=owl-] {
@@ -328,6 +263,10 @@ header .navbar .logo {
   position: relative
 }
 
+/* Style for date and location of projects */
+#date {
+  font-size: 12px
+}
 
 /* Style for Footer */
 footer {
@@ -351,21 +290,24 @@ footer {
 }
 
 
-/* Style for Animation */
-@keyframes fadeOut{
-  0%{
-      opacity: 1
+/* Create style for Animation */
+@keyframes pageTransition {
+  0% {
+    opacity: 0;
+    transform: none
   }
-  100%{
-      opacity: 0
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 100%, 0);
   }
 }
 
 
 /* Style for .owl-carousel */
-.fadeOut{
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut
+.transition{
+  -webkit-animation-name: pageTransition;
+  animation-name: pageTransition
 }
 
 .animated{
@@ -390,3 +332,131 @@ footer {
   min-height: 1px;
   float: left;
 }
+
+
+/* Responsive Versions*/
+@media screen and (max-width: 950px) {
+  .tag {
+    font-size: 40px
+  }
+  .number {
+    font-size: 100px
+  }
+  .text-inner h2 {
+    font-size: 35px
+  }
+  #date {
+    display: none
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .tag {
+    font-size: 30px
+  }
+  .number {
+    font-size: 100px
+  }
+  .text-inner h2 {
+    font-size: 35px
+  }
+  #date {
+    display: none
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .tag {
+    font-size: 20px
+  }
+  #page {
+    padding-top: 5em
+  } 
+  header {
+    padding: 2em 0; 
+  } 
+  .btn-view {
+    letter-spacing: 2px; 
+  } 
+  .number {
+    display: none; 
+  } 
+  .text-inner h2 {
+    font-size: 24px; 
+  }
+  .desc {
+    padding: 1em;
+    background: #fff;
+    width: 100%; 
+  } 
+  .owl-controls {
+    left: 600px; 
+  } 
+  #date {
+    display: none
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .owl-controls {
+    left: 450px; 
+  }
+  .display-tc {
+    padding: 0 0 0 0
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .desc {
+    padding: 1em;
+    background: #fff;
+    width: 140%; 
+  } 
+  #date {
+    display: none
+  }
+  .owl-controls {
+    left: 250px; 
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .desc {
+    padding: 1em;
+    background: #fff;
+    width: 130%; 
+  } 
+  #date {
+    display: none
+  }
+  .owl-controls {
+    left: 250px; 
+  }
+  #description {
+    font-size: 12px
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .desc {
+    padding: 1em;
+    background: #fff;
+    width: 130%; 
+  } 
+  
+  header .navbar .logo  {
+    margin-right: 10px;
+  }
+
+  #date {
+    display: none
+  }
+  .owl-controls {
+    left: 250px; 
+  }
+  #description {
+    font-size: 12px
+  }
+}
+
