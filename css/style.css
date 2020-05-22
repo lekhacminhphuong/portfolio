@@ -186,7 +186,11 @@ header .navbar .github {
   width: 55%;
   z-index: -1;
   float: left;
-  position: relative
+  position: relative;
+}
+
+.hero-img {
+  border-radius: 0 60px 60px 0;
 }
 
 .col-one-forth {
@@ -264,6 +268,7 @@ header .navbar .github {
   border: 1px dashed rgba(0, 0, 0, 0.8);
   padding: 8px;
   text-decoration: none; 
+  border-radius: 5px
 }
 
 .btn-view:hover {
@@ -275,46 +280,43 @@ header .navbar .github {
 /* Style for control bar (left and right page buttons) */
 .owl-controls {
     position: absolute;
-    bottom: 0;
-    left: 91.5%;
-    right: 0;
-    width: 120px;
-    display: inline;
-    cursor: pointer;
+    bottom: 25px;
+    left: 55.5%;
+    cursor: pointer    
 }
 
 .owl-nav [class*=owl-] {
-  padding: 8px 15px;
-  background: #eceae5;
-  border: 1px dashed rgba(0, 0, 0, 0.8);
-  border-radius: 0; 
+  padding: 8px 30px;
+  display: inline;
+}
+
+.owl-nav .owl-next i {
+  border-radius: 0 7px 7px 0
+}
+
+.owl-nav .owl-prev i {
+  border-radius: 7px 0 0 7px
 }
     
 .owl-nav [class*=owl-] i {
-  border: none; 
+  background: #eceae5;
+  border: 1px dashed rgba(0, 0, 0, 0.8);
+  position: absolute;
 }
-    
-.owl-nav [class*=owl-]:hover {
+  
+.owl-nav [class*=owl-]:hover i {
   background: #b7ae9b;
 }
   
 .owl-next, .owl-prev {
-  margin: 1px; 
-}
-
-.owl-next:hover, .owl-prev:hover {
-  border: 1px dashed rgba(0, 0, 0, 0.8);
+  margin: 11px; 
 }
 
 .owl-nav .owl-next i,
 .owl-nav .owl-prev i {
-  font-size: 14px;
+  font-size: 18px;
   color: #000;
   background: transparent; 
-}
-
-.owl-next:hover i, .owl-prev:hover i {
-  color: white; 
 }
 
 
