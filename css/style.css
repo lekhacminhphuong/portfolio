@@ -10,10 +10,10 @@
 /* Style for PL logo at the left top */
 img {
     border: 0;
-    height: 60px;
-    width: 85px;
+    height: 40px;
+    width: 55px;
     float: left;
-    margin-left: 15px
+    margin-left: 20px
 }
 
 /* Style for body */
@@ -77,7 +77,7 @@ header {
 
 /* Style for 'Phuong Le' text logo */
 header .navbar .logo {
-  font-size: 18px;
+  font-size: 15px;
   text-transform: uppercase;
   color: #000;
   font-family: 'Major Mono Display', monospace;
@@ -85,8 +85,9 @@ header .navbar .logo {
   letter-spacing: 10px;
   text-align: center; 
   text-decoration: none;
-  float: right;
-  margin-right: 50px;
+  float: left;
+  margin-top: 6px;
+  margin-left: 20px;
   position: relative
 }
 
@@ -100,6 +101,68 @@ header .navbar .logo {
 }
 
 .logo:hover:before {
+  background: #000;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Style for 'Resume' text logo */
+header .navbar .resume {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #000;
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-align: center; 
+  text-decoration: none;
+  float: right;
+  margin-top: 6px;
+  margin-right: 20px;
+  position: relative
+}
+
+.resume:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 50%;
+  left: -2.5px
+}
+
+.resume:hover:before {
+  background: #000;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Style for 'GitHub' text logo */
+header .navbar .github {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #000;
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-align: center; 
+  text-decoration: none;
+  float: right;
+  margin-top: 6px;
+  margin-right: 50px;
+  position: relative
+}
+
+.github:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 50%;
+  left: -2.5px
+}
+
+.github:hover:before {
   background: #000;
   width: 100%;
   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -399,6 +462,13 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+  header .navbar .resume  {
+    display: none;
+  }
+
+  header .navbar .github  {
+    display: none
+  }
   .owl-controls {
     left: 450px; 
   }
@@ -413,6 +483,13 @@ footer {
     background: #fff;
     width: 140%; 
   } 
+  header .navbar .resume  {
+    display: none;
+  }
+
+  header .navbar .github  {
+    display: none
+  }
   #date {
     display: none
   }
@@ -427,6 +504,13 @@ footer {
     background: #fff;
     width: 130%; 
   } 
+  header .navbar .resume  {
+    display: none;
+  }
+
+  header .navbar .github  {
+    display: none
+  }
   #date {
     display: none
   }
@@ -447,6 +531,14 @@ footer {
   
   header .navbar .logo  {
     margin-right: 10px;
+  }
+
+  header .navbar .resume  {
+    display: none;
+  }
+
+  header .navbar .github  {
+    display: none
   }
 
   #date {
